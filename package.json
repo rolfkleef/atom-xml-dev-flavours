@@ -1,6 +1,6 @@
 {
   "name": "xml-dev-flavours",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A collection of snippets for XML-flavoured development",
   "keywords": [
     "xml",
@@ -8,12 +8,10 @@
     "xspec",
     "snippets"
   ],
-
   "author": "Rolf Kleef",
   "homepage": "https://github.com/rolfkleef/atom-xml-dev-flavours#readme",
   "repository": "https://github.com/rolfkleef/atom-xml-dev-flavours.git",
   "bugs": "https://github.com/rolfkleef/atom-xml-dev-flavours/issues",
-
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0"

@@ -1,0 +1,10 @@
+'scopeName': 'text.xml.xspec'
+'name': 'Xspec'
+'fileTypes': [
+  'xspec'
+]
+'patterns': [
+  {
+    'include': 'text.xml'
+  }
+]

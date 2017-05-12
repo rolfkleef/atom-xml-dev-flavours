@@ -1,0 +1,15 @@
+# XSLT developer snippets
+
+'.text.xml':
+
+  'namespace xs':
+    'prefix': 'xs (namespace)'
+    'body': 'xmlns:xs="http://www.w3.org/2001/XMLSchema"'
+
+  'namespace xlink':
+    'prefix': 'xlink (namespace)'
+    'body': 'xmlns:xlink="http://www.w3.org/1999/xlink"'
+
+  'namespace functx':
+    'prefix': 'functx (namespace)'
+    'body': 'xmlns:functx="http://www.functx.com"'

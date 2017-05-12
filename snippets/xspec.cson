@@ -1,0 +1,115 @@
+# Xspec developer snippets
+
+'.text.xml.xspec':
+
+  'namespace xspec':
+    'prefix': 'xspec (namespace)'
+    'body': 'xmlns:x="http://www.jenitennison.com/xslt/xspec"'
+
+  'x:description':
+    'prefix': 'description'
+    'body': """
+      <x:description xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:x="http://www.jenitennison.com/xslt/xspec"$1>
+
+        $2
+      </x:description>
+    """
+
+  'x:import':
+    'prefix': 'import'
+    'body': """
+      <x:import href="$1"/>$2
+    """
+
+  'x:scenario':
+    'prefix': 'scenario'
+    'body': """
+      <x:scenario label="when $1">
+        $2
+      </x:scenario>
+    """
+
+  'x:scenario (pending)':
+    'prefix': 'pending scenario'
+    'body': """
+      <x:scenario pending="$1"
+        label="when $2">
+        $3
+      </x:scenario>
+    """
+
+  'x:scenario (focus)':
+    'prefix': 'focus scenario'
+    'body': """
+      <x:scenario focus="$1"
+        label="when $2">
+        $3
+      </x:scenario>
+    """
+
+  'x:context (inline)':
+    'prefix': 'context (inline)'
+    'body': """
+      <x:context>
+        $1
+      </x:context>$2
+    """
+
+  'x:context (href)':
+    'prefix': 'context (href)'
+    'body': """
+      <x:context href="$1" select="$2"/>$3
+    """
+
+  'x:call (function)':
+    'prefix': 'call function'
+    'body': """
+      <x:call function="$1">
+        <x:param select="$2"/>$3
+      </x:call>$4
+    """
+
+  'x:call (template)':
+    'prefix': 'call template'
+    'body': """
+      <x:call template="$1">
+        <x:param select="$2"/>$3
+      </x:call>$4
+    """
+
+  'x:param (select)':
+    'prefix': 'param (select)'
+    'body': """
+      <x:param select="$1"/>$2
+    """
+
+  'x:param (value)':
+    'prefix': 'param (value)'
+    'body': """
+      <x:param name="$1">
+        <value>$2</value>$3
+      </x:param>$4
+    """
+
+  'x:expect (select)':
+    'prefix': 'expect (select)'
+    'body': """
+      <x:expect label="it should $1"
+        select="$2"/>$3
+    """
+
+  'x:expect (value)':
+    'prefix': 'expect (value)'
+    'body': """
+      <x:expect label="it should $1">
+        $2
+      </x:expect>$3
+    """
+
+  'x:expect (test)':
+    'prefix': 'expect (test)'
+    'body': """
+      <x:expect label="it should $1"
+        test="$2"/>$3
+    """

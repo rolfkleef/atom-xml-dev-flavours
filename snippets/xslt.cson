@@ -1,0 +1,113 @@
+# XSLT developer snippets
+
+'.text.xml.xsl':
+
+  'namespace xsl':
+    'prefix': 'xsl (namespace)'
+    'body': 'xmlns:xsl="http://www.w3.org/1999/XSL/Transform"'
+
+  'xsl:stylesheet':
+    'prefix': 'stylesheet'
+    'body': """
+      <xsl:stylesheet version='2.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"$1>
+
+        $2
+      </xsl:stylesheet>
+    """
+
+  'xsl:template':
+    'prefix': 'template'
+    'body': """
+      <xsl:template match="$1">
+        $2
+      </xsl:template>
+    """
+
+  'xsl:template (named)':
+    'prefix': 'template '
+    'body': """
+      <xsl:template name="$1">
+        $2
+      </xsl:template>
+    """
+
+  'xsl:apply-templates':
+    'prefix': 'apply-templates'
+    'body': '<xsl:apply-templates select="$1"/>$2'
+
+  'xsl:call-template':
+    'prefix': 'call-template'
+    'body': """
+      <xsl:call-template name="$1">
+        <xsl:with-param name="$2" select="$3"/>$4
+      </xsl:call-template>
+    """
+
+  'xsl:with-param':
+    'prefix': 'with-param'
+    'body': '<xsl:with-param name="$1" select="$2"/>$3'
+
+  'xsl:with-param (long)':
+    'prefix': 'with-param '
+    'body': '<xsl:with-param name="$1">$2</xsl:with-param>$3'
+
+  'xsl:param':
+    'prefix': 'param'
+    'body': '<xsl:param name="$1" select="$2"/>$3'
+
+  'xsl:param (long)':
+    'prefix': 'param '
+    'body': '<xsl:param name="$1">$2</xsl:param>$3'
+
+  'xsl:attribute':
+    'prefix': 'attribute '
+    'body': """
+      <xsl:attribute name="$1" select="$2"/>$3
+    """
+
+  'xsl:variable':
+    'prefix': 'variable'
+    'body': '<xsl:variable name="$1" select="$2"/>$3'
+
+  'xsl:value-of':
+    'prefix': 'value-of'
+    'body': '<xsl:value-of select="$1"/>$2'
+
+  'xsl:for-each':
+    'prefix': 'for-each'
+    'body': """
+      <xsl:for-each select="$1">
+        $2
+      </xsl:for-each>
+    """
+
+  'xsl:for-each-group':
+    'prefix': 'for-each-group'
+    'body': """
+      <xsl:for-each-group select="$1" group-by="$2">
+        $3
+      </xsl:for-each-group>
+    """
+
+  'xsl:choose':
+    'prefix': 'choose'
+    'body': """
+      <xsl:choose>
+        <xsl:when test="$1">$2</xsl:when>
+        <xsl:otherwise>$3</xsl:otherwise>
+      </xsl:choose>$4
+    """
+
+  'xsl:if':
+    'prefix': 'if'
+    'body': """
+      <xsl:if test="$1">
+        $2
+      </xsl:if>
+    """
+
+  # Generic <xsl:tag>...</xsl:tag>
+  'xsl:tag':
+    'prefix': '<xsl'
+    'body': '<xsl:${1:tag}>$2</xsl:${1:tag}>'

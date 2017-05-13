@@ -9,7 +9,3 @@
   'Xlink namespace':
     'prefix': 'xmlns:xlink=...'
     'body': 'xmlns:xlink="http://www.w3.org/1999/xlink"'
-
-  'functx namespace':
-    'prefix': 'xmlns:functx=...'
-    'body': 'xmlns:functx="http://www.functx.com"'

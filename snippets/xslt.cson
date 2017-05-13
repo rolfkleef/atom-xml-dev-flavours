@@ -6,6 +6,10 @@
     'prefix': 'xmlns:xsl=...'
     'body': 'xmlns:xsl="http://www.w3.org/1999/XSL/Transform"'
 
+  'functx namespace':
+    'prefix': 'xmlns:functx=...'
+    'body': 'xmlns:functx="http://www.functx.com"'
+
   'xsl:stylesheet':
     'prefix': 'stylesheet'
     'body': """
@@ -17,7 +21,7 @@
     """
 
   'xsl:template':
-    'prefix': 'template'
+    'prefix': 'template match'
     'body': """
       <xsl:template match="$1">
         $2
@@ -25,7 +29,7 @@
     """
 
   'xsl:template (named)':
-    'prefix': 'template '
+    'prefix': 'template name'
     'body': """
       <xsl:template name="$1">
         $2
@@ -45,23 +49,23 @@
     """
 
   'xsl:with-param':
-    'prefix': 'with-param'
+    'prefix': 'with-param select'
     'body': '<xsl:with-param name="$1" select="$2"/>$3'
 
   'xsl:with-param (long)':
-    'prefix': 'with-param '
+    'prefix': 'with-param inline'
     'body': '<xsl:with-param name="$1">$2</xsl:with-param>$3'
 
   'xsl:param':
-    'prefix': 'param'
+    'prefix': 'param name'
     'body': '<xsl:param name="$1" select="$2"/>$3'
 
   'xsl:param (long)':
-    'prefix': 'param '
+    'prefix': 'param inline'
     'body': '<xsl:param name="$1">$2</xsl:param>$3'
 
   'xsl:attribute':
-    'prefix': 'attribute '
+    'prefix': 'attribute'
     'body': """
       <xsl:attribute name="$1" select="$2"/>$3
     """

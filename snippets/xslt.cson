@@ -2,8 +2,8 @@
 
 '.text.xml.xsl':
 
-  'namespace xsl':
-    'prefix': 'xsl (namespace)'
+  'XSLT namespace':
+    'prefix': 'xmlns:xsl=...'
     'body': 'xmlns:xsl="http://www.w3.org/1999/XSL/Transform"'
 
   'xsl:stylesheet':

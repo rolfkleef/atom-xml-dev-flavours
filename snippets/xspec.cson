@@ -2,8 +2,8 @@
 
 '.text.xml.xspec':
 
-  'namespace xspec':
-    'prefix': 'xspec (namespace)'
+  'Xspec namespace':
+    'prefix': 'xmlns:x=...'
     'body': 'xmlns:x="http://www.jenitennison.com/xslt/xspec"'
 
   'x:description':

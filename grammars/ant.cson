@@ -1,0 +1,10 @@
+'scopeName': 'text.xml.ant'
+'name': 'Ant'
+'fileTypes': [
+  'build.xml'
+]
+'patterns': [
+  {
+    'include': 'text.xml'
+  }
+]

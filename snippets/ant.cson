@@ -1,0 +1,80 @@
+# Ant build file snippets
+
+'.text.xml.ant':
+
+  'ant:project':
+    'prefix': 'project'
+    'body': """
+      <project name="$1" default="$2" basedir=".$3">
+        <description>
+          $4
+        </description>
+        $5
+      </project>
+    """
+
+  'ant:target':
+    'prefix': 'target'
+    'body': """
+      <target name="$1"
+        depends="$2"
+        description="$3">
+        $4
+      </target>
+      $5
+    """
+
+  'ant:xslt':
+    'prefix': 'xslt'
+    'body': """
+      <xslt
+        basedir="$1"
+        includes="$2"
+        destdir="$3"
+        extension="$4"
+        style="$5.xslt"
+       />
+      $6
+    """
+
+  'ant:import':
+    'prefix': 'import'
+    'body': """
+      <import file="$1"/>
+      $2
+    """
+
+  'ant:mkdir':
+    'prefix': 'mkdir'
+    'body': """
+      <mkdir dir="$1"/>
+      $2
+    """
+
+  'ant:copy':
+    'prefix': 'copy'
+    'body': """
+      <copy todir="$1">
+        <fileset dir="$2"/>
+      </copy>
+      $3
+    """
+
+  'ant:echo':
+    'prefix': 'echo'
+    'body': """
+      <echo level="$1">$2</echo>
+      $3
+    """
+
+  'ant:dependset':
+    'prefix': 'dependset'
+    'body': """
+      <dependset>
+        <sources>
+          <file file="$1" />
+        </sources>
+        <targetfileset dir="$2" includes="$3" />
+      </dependset>
+      $4
+    """

@@ -70,10 +70,6 @@
       <xsl:attribute name="$1" select="$2"/>$3
     """
 
-  'xsl:variable':
-    'prefix': 'variable'
-    'body': '<xsl:variable name="$1" select="$2"/>$3'
-
   'xsl:value-of':
     'prefix': 'value-of'
     'body': '<xsl:value-of select="$1"/>$2'
@@ -109,6 +105,44 @@
       <xsl:if test="$1">
         $2
       </xsl:if>
+    """
+
+  'xsl:sort':
+    'prefix': 'sort'
+    'body': """
+      <xsl:sort select="$1" data-type="text$2" order="ascending$3"/>
+    """
+
+  'xsl:perform-sort':
+    'prefix': 'perform-sort'
+    'body': """
+      <xsl:perform-sort select="$1">
+        <xsl:sort select="$2" data-type="text$3" order="ascending$4"/>
+      </xsl:perform-sort>
+    """
+
+  'xsl:variable':
+    'prefix': 'variable'
+    'body': '<xsl:variable name="$1" select="$2"/>$3'
+
+  'xsl:sequence':
+    'prefix': 'sequence'
+    'body': """
+      <xsl:sequence>
+        $1
+      </xsl:sequence>
+    """
+
+  'xsl:text':
+    'prefix': 'text'
+    'body': """
+      <xsl:text>$1</xsl:text>
+    """
+
+  'xsl:message':
+    'prefix': 'message'
+    'body': """
+      <xsl:message>$1</xsl:message>
     """
 
   # Generic <xsl:tag>...</xsl:tag>

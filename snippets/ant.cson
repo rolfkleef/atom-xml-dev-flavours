@@ -17,8 +17,8 @@
     'prefix': 'target'
     'body': """
       <target name="$1"
-        depends="$2"
-        description="$3">
+        description="$2"
+        depends="$3">
         $4
       </target>
       $5
@@ -77,4 +77,10 @@
         <targetfileset dir="$2" includes="$3" />
       </dependset>
       $4
+    """
+
+  'ant:fileset':
+    'prefix': 'fileset (simple)'
+    'body': """
+      <fileset dir="$1" includes="$2"/>$3
     """
